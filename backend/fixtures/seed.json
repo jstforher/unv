@@ -1,0 +1,203 @@
+[
+  {
+    "model": "memories.sitesettings",
+    "pk": 1,
+    "fields": {
+      "music_url": "https://example.com/romantic-background-music.mp3",
+      "rotation_speed": 3.0,
+      "show_particles": true,
+      "theme_colors": {
+        "bg_primary": "#0b1020",
+        "bg_secondary": "#1a1f3a",
+        "accent_primary": "#9b6cff",
+        "accent_secondary": "#ff6b8a",
+        "accent_star": "#f6f7ff",
+        "glass_bg": "rgba(255, 255, 255, 0.06)",
+        "text_primary": "#ffffff",
+        "text_secondary": "#b8b8d1"
+      },
+      "secret_reveal_token": "550e8400-e29b-41d4-a716-446655440000",
+      "secret_reveal_used": false
+    }
+  },
+  {
+    "model": "memories.memory",
+    "pk": "550e8400-e29b-41d4-a716-446655440001",
+    "fields": {
+      "title": "Our First Date",
+      "caption": "The day everything began. Coffee turned into a 6-hour conversation that felt like minutes. I knew that night that my life had changed forever.",
+      "media_type": "image",
+      "position_x": 5.2,
+      "position_y": 2.1,
+      "position_z": -8.3,
+      "orbit_radius": 0.0,
+      "is_secret": false,
+      "is_featured": true,
+      "category": "milestone",
+      "date": "2023-01-15",
+      "order": 1
+    }
+  },
+  {
+    "model": "memories.memory",
+    "pk": "550e8400-e29b-41d4-a716-446655440002",
+    "fields": {
+      "title": "Midnight Stargazing",
+      "caption": "That perfect summer night when we drove out to the middle of nowhere and just watched the stars. Your laugh was my favorite constellation.",
+      "media_type": "image",
+      "position_x": -3.8,
+      "position_y": 4.5,
+      "position_z": 6.2,
+      "orbit_radius": 0.0,
+      "is_secret": false,
+      "is_featured": true,
+      "category": "trip",
+      "date": "2023-07-22",
+      "order": 2
+    }
+  },
+  {
+    "model": "memories.memory",
+    "pk": "550e8400-e29b-41d4-a716-446655440003",
+    "fields": {
+      "title": "The Rainy Day We Got Lost",
+      "caption": "We got completely lost in that small town, but ended up finding the coziest bookstore café. Sometimes wrong turns lead to the right destinations.",
+      "media_type": "image",
+      "position_x": 7.1,
+      "position_y": -1.2,
+      "position_z": -2.4,
+      "orbit_radius": 0.0,
+      "is_secret": false,
+      "is_featured": false,
+      "category": "trip",
+      "date": "2023-04-08",
+      "order": 3
+    }
+  },
+  {
+    "model": "memories.memory",
+    "pk": "550e8400-e29b-41d4-a716-446655440004",
+    "fields": {
+      "title": "Surprise Birthday Party",
+      "caption": "Planning that surprise party gave me more anxiety than anything, but seeing your face made it all worth it. I'd do anything to see you that happy again.",
+      "media_type": "image",
+      "position_x": -4.6,
+      "position_y": -3.1,
+      "position_z": 8.7,
+      "orbit_radius": 0.0,
+      "is_secret": false,
+      "is_featured": true,
+      "category": "party",
+      "date": "2023-10-12",
+      "order": 4
+    }
+  },
+  {
+    "model": "memories.memory",
+    "pk": "550e8400-e29b-41d4-a716-446655440005",
+    "fields": {
+      "title": "Morning Coffee Ritual",
+      "caption": "Those quiet mornings with coffee, sunlight streaming through the kitchen window, and you telling me about your dreams. These simple moments mean everything.",
+      "media_type": "image",
+      "position_x": 2.3,
+      "position_y": 6.8,
+      "position_z": -5.1,
+      "orbit_radius": 0.0,
+      "is_secret": false,
+      "is_featured": false,
+      "category": "random",
+      "date": "2023-08-03",
+      "order": 5
+    }
+  },
+  {
+    "model": "memories.memory",
+    "pk": "550e8400-e29b-41d4-a716-446655440006",
+    "fields": {
+      "title": "Our First Apartment",
+      "caption": "Moving in together felt like coming home. Boxes everywhere, but somehow it felt perfect because you were there.",
+      "media_type": "image",
+      "position_x": -6.4,
+      "position_y": 1.9,
+      "position_z": 3.6,
+      "orbit_radius": 0.0,
+      "is_secret": false,
+      "is_featured": true,
+      "category": "milestone",
+      "date": "2023-09-01",
+      "order": 6
+    }
+  },
+  {
+    "model": "memories.memory",
+    "pk": "550e8400-e29b-41d4-a716-446655440007",
+    "fields": {
+      "title": "That Perfect Sunset",
+      "caption": "We climbed to the top of that hill just to see the sunset, but really I just wanted to see your face in the golden light. You're more beautiful than any sunset.",
+      "media_type": "image",
+      "position_x": 1.7,
+      "position_y": -5.4,
+      "position_z": 7.9,
+      "orbit_radius": 0.0,
+      "is_secret": false,
+      "is_featured": false,
+      "category": "random",
+      "date": "2023-06-17",
+      "order": 7
+    }
+  },
+  {
+    "model": "memories.memory",
+    "pk": "550e8400-e29b-41d4-a716-446655440008",
+    "fields": {
+      "title": "Dancing in the Kitchen",
+      "caption": "No music, just us. You said I was a terrible dancer but you laughed anyway. I'll take terrible dancing if it means I get to see you smile like that.",
+      "media_type": "image",
+      "position_x": -2.8,
+      "position_y": 3.2,
+      "position_z": -6.5,
+      "orbit_radius": 0.0,
+      "is_secret": false,
+      "is_featured": false,
+      "category": "random",
+      "date": "2023-11-25",
+      "order": 8
+    }
+  },
+  {
+    "model": "memories.memory",
+    "pk": "550e8400-e29b-41d4-a716-446655440009",
+    "fields": {
+      "title": "The Beach Trip",
+      "caption": "Getting caught in that rainstorm was the best thing that happened. Nothing else in the world mattered except you and I in that little café, waiting for the storm to pass.",
+      "media_type": "image",
+      "position_x": 4.9,
+      "position_y": -2.7,
+      "position_z": 1.4,
+      "orbit_radius": 0.0,
+      "is_secret": false,
+      "is_featured": true,
+      "category": "trip",
+      "date": "2023-05-20",
+      "order": 9
+    }
+  },
+  {
+    "model": "memories.memory",
+    "pk": "550e8400-e29b-41d4-a716-446655440010",
+    "fields": {
+      "title": "Our Secret Message",
+      "caption": "This is the one that only you can find. Hidden in our universe, waiting to be discovered. This is my promise to you: I will love you through every memory we make and every star we discover together. You are my universe, my everything, my forever.",
+      "media_type": "image",
+      "position_x": 0.0,
+      "position_y": 8.5,
+      "position_z": 0.0,
+      "orbit_radius": 1.2,
+      "is_secret": true,
+      "is_featured": false,
+      "category": "milestone",
+      "date": "2023-12-25",
+      "order": 10
+    }
+  }
+]
