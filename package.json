@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write .",
+    "type-check": "tsc --noEmit",
+    "test": "echo \"No tests specified yet\" && exit 0"
   },
   "dependencies": {
     "react": "^18.3.1",
