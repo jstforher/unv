@@ -1,0 +1,96 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:15-alpine
+    container_name: her_beautiful_universe_db
+    environment:
+      POSTGRES_DB: her_beautiful_universe
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  # Django Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: her_beautiful_universe_backend
+    environment:
+      - DJANGO_SETTINGS_MODULE=project.settings.production
+      - SECRET_KEY=${SECRET_KEY:-django-insecure-change-me-in-production}
+      - DEBUG=False
+      - ALLOWED_HOSTS=localhost,127.0.0.1,backend
+      - DB_NAME=her_beautiful_universe
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_HOST=db
+      - DB_PORT=5432
+    volumes:
+      - media_volume:/app/media
+      - static_volume:/app/staticfiles
+      - logs_volume:/app/logs
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  # Next.js Frontend
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: her_beautiful_universe_frontend
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=http://localhost:8000/api
+      - PORT=3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - app-network
+
+volumes:
+  postgres_data:
+    driver: local
+  media_volume:
+    driver: local
+  static_volume:
+    driver: local
+  logs_volume:
+    driver: local
+
+networks:
+  app-network:
+    driver: bridge
